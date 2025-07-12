@@ -1,0 +1,254 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omegle - Talk to strangers!</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Home Page Section -->
+    <div id="homePage" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; margin: 0; padding: 0;">
+        <header style="background: white; padding: 15px 20px; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100;">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <img src="attached_assets/logo_1752167112743.png" alt="Logo" class="logo-icon" style="width: 40px; height: 40px; border-radius: 8px;">
+                <span class="logo-text" style="font-size: 28px; font-weight: bold; color: #FF6B35;">omegle<span class="com" style="color: #666; font-weight: normal;">.com</span></span>
+            </div>
+        </header>
+
+        <main style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+            <section class="hero">
+                <h1 style="font-size: 48px; font-weight: bold; text-align: center; margin-bottom: 40px; color: #333;">Talk to strangers!</h1>
+                
+                <div class="intro" style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <p class="wave" style="font-size: 18px; margin-bottom: 15px;">👋 <strong>Hey everyone!</strong></p>
+                    <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Missing Omegle? Same here! When the original Omegle went offline, we felt that loss too. So guess what? A bunch of us college kids couldn't let it disappear — so we built something better!</p>
+                    <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;"><strong>Welcome to Omegle Web</strong> — a modern, safer, and friendlier alternative to the original Omegle!</p>
+                </div>
+
+                <div class="features" style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;">🌍 What's the deal?</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.5;">• Global community for meeting new people through video and text chat</li>
+                        <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.5;">• Privacy-focused design — your data stays yours, and we enforce strict community guidelines</li>
+                        <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.5;">• No app needed — works right in your browser</li>
+                        <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.5;">• Honestly? Way smoother and friendlier than Ome TV or Monkey (yeah, we said it!)</li>
+                    </ul>
+                </div>
+
+                <div class="main-cta" style="text-align: center; margin: 50px 0;">
+                    <button class="start-btn" id="startNowBtn" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; border: none; padding: 20px 60px; font-size: 24px; font-weight: bold; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3); text-transform: uppercase; letter-spacing: 1px;">Start Now</button>
+                </div>
+
+                <div class="photo-section" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <img src="attached_assets/logo.jpg_1752167785682.jpg" alt="Talk to Strangers" class="hero-image" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+
+                <div class="ready-section" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                    <p class="sparkle" style="font-size: 16px; margin-bottom: 10px;">✨ <strong>Ready to join?</strong></p>
+                    <p style="margin-bottom: 10px; line-height: 1.6;">Let's keep the spirit of spontaneous, respectful conversation alive! Make new friends, share stories, or just explore!</p>
+                    <p style="margin-bottom: 10px; line-height: 1.6;">It's free, instant, and who knows who you'll meet next? 🌍❤️</p>
+                    <p style="margin-bottom: 10px; line-height: 1.6;">These moments remind us that the world feels smaller, kinder, and wonderfully human when we dare to say hello.</p>
+                </div>
+
+                <div class="disclaimer" style="margin-bottom: 30px; padding-bottom: 20px;">
+                    <h3 style="font-size: 20px; margin-bottom: 15px; color: #333;">⚠️ Disclaimer & Warning:</h3>
+                    <p style="margin-bottom: 10px; line-height: 1.6;">By using this website, <strong>you agree</strong> that:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li style="margin-bottom: 5px; line-height: 1.5; list-style: disc;">Any actions you take (text, audio, photo, or video communication) are <strong>entirely your responsibility.</strong></li>
+                        <li style="margin-bottom: 5px; line-height: 1.5; list-style: disc;">Any illegal, abusive, or inappropriate activity is <strong>strictly prohibited.</strong></li>
+                        <li style="margin-bottom: 5px; line-height: 1.5; list-style: disc;">Clean, respectful chat only.</li>
+                        <li style="margin-bottom: 5px; line-height: 1.5; list-style: disc;">Users are fully responsible for their own actions.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer style="background: white; padding: 40px 20px; text-align: center; border-top: 1px solid #eee;">
+            <div class="social-icons" style="margin-bottom: 20px;">
+                <a href="https://www.instagram.com" target="_blank" style="color: #333; margin: 0 10px; font-size: 24px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" style="color: #333; margin: 0 10px; font-size: 24px; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com" target="_blank" style="color: #333; margin: 0 10px; font-size: 24px; text-decoration: none;"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="color: #666; font-size: 14px; margin: 0;">© 2024 omegle.com All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Home Screen (Chat Selection) -->
+    <div class="home-container" id="homeScreen" style="display: none;">
+        <div class="home-content">
+            <div class="logo">
+                <img src="attached_assets/logo_1752167112743.png" alt="Logo" class="logo-img" style="width: 50px; height: 50px; border-radius: 8px;">
+                <span class="omegle-text">omegle<span class="dotcom">.com</span></span>
+            </div>
+
+            <div class="tagline">Talk to strangers!</div>
+
+            <div class="age-verification">
+                <p>By using Omegle, you accept the terms at the bottom. You must be 18+ or 13+ with parental permission.</p>
+            </div>
+
+            <div class="description">
+                Mobile video chat is an experimental new feature.<br>
+                Video is monitored, so keep it clean!<br>
+                Go to <a href="#" class="alt-site-link">an adult site</a> instead if that's what you want.
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary" id="startChatBtn">Start a chat</button>
+                <button class="btn btn-secondary" id="startVideoBtn">Video</button>
+            </div>
+
+            <div class="interests-section">
+                <p class="interests-label">Meet strangers with your interests!</p>
+                <div class="interests">
+                    <input type="text" id="interestsInput" placeholder="Add your interests (optional)">
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Omegle is a great way to meet new friends, even while practicing social distancing.</p>
+                <div class="footer-links">
+                    <a href="#" id="termsLink">Terms & Conditions</a>
+                    <a href="#" id="privacyLink">Privacy Policy</a>
+                    <a href="#" id="backToHome">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeTermsModal">&times;</span>
+            <h3 class="modal-title">Terms and Conditions</h3>
+            <p class="modal-text">
+                By using this website, you agree that any actions you take during your use — including text, audio, photo, video
+                communication — are solely your responsibility. Any illegal, abusive, or inappropriate activity is strictly
+                prohibited. The creator or owner of this website will not be held liable for user actions.
+            </p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="agreeBtn">Agree</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header omegle-style-header">
+            <div class="chat-exit" id="chatExitBtn">⟵ Exit</div>
+
+            <div class="omegle-logo-text">  
+                <img src="attached_assets/logo_1752167112743.png" alt="Logo" class="logo-img" style="width: 50px; height: 50px; border-radius: 8px;">
+                <div class="logo-text-block">  
+                    <span class="omegle-text">omegle<span class="dotcom">.com</span></span>  
+                    <span class="omegle-tagline">Talk to strangers!</span>  
+                </div>  
+            </div>
+
+            <div class="user-count-indicator">
+                <div class="eye-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="currentColor" />
+                    </svg>
+                </div>
+                <span id="userCountText">0 online</span>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will appear here -->
+        </div>
+
+        <div class="chat-input-container">
+            <button class="attach-btn" id="attachBtn">+
+                <div class="attach-menu" id="attachMenu">
+                    <div class="attach-option" id="sendLocation">Send Location</div>
+                    <div class="attach-option" id="sendPhoto">Send Photo</div>
+                    <div class="attach-option" id="sendVideo">Send Video</div>
+                </div>
+            </button>
+            <input type="text" class="chat-input" id="messageInput" placeholder="Type your message...">
+            <button class="send-btn" id="sendBtn">&#10148;</button>
+            <button class="connect-btn" id="connectBtn">
+                <div class="connect-icon"></div>
+                <span>New</span>
+            </button>
+        </div>
+
+        <input type="file" id="photoInput" accept="image/*" class="hidden-file-input">
+        <input type="file" id="videoInput" accept="video/*" class="hidden-file-input">
+    </div>
+
+    <!-- Video Chat Interface -->
+    <div class="video-container" id="videoContainer">
+        <div class="video-header omegle-style-header">
+            <div class="video-exit" id="videoExitBtn">⟵ Exit</div>
+            <div class="omegle-logo-text">
+                <img src="attached_assets/logo_1752167112743.png" alt="Logo" class="logo-img" style="width: 50px; height: 50px; border-radius: 8px;">
+                <div class="logo-text-block">
+                    <span class="omegle-text">omegle<span class="dotcom">.com</span></span>
+                    <span class="omegle-tagline">Talk to strangers!</span>
+                </div>
+            </div>
+        
+            <div class="user-count-indicator">
+                <div class="eye-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="currentColor" />
+                    </svg>
+                </div>
+                <span id="videoUserCountText">0 online</span>
+            </div>
+        </div>
+
+        <div class="video-chat-layout">
+            <div class="video-section">
+                <div class="video-window stranger-video">
+                    <video class="video-element" id="remoteVideo" autoplay playsinline></video>
+                    <div class="video-label">Omegle.xyz</div>
+                </div>
+
+                <div class="video-window user-video">
+                    <video class="video-element" id="localVideo" autoplay playsinline muted></video>
+                    <div class="video-label">You</div>
+                </div>
+            </div>
+
+            <div class="chat-section">
+                <div class="video-chat-messages" id="videoChatMessages">
+                    <!-- Messages will appear here -->
+                </div>
+
+                <div class="video-chat-input-container">
+                    <input type="text" class="chat-input" id="videoMessageInput" placeholder="Type your message...">
+                    <button class="send-btn" id="videoSendBtn">&#10148;</button>
+                    <button class="connect-btn" id="videoConnectBtn">
+                        <div class="connect-icon"></div>
+                        <span>New</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Context Menu -->
+    <div class="message-menu" id="messageMenu">
+        <div class="menu-item" id="deleteMessage">Delete</div>
+        <div class="menu-item" id="replyMessage">Reply</div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typingIndicator" class="typing-indicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
