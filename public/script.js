@@ -1,4 +1,4 @@
- 
+  
 // DOM Elements
 const homePage = document.getElementById('homePage');
 const homeScreen = document.getElementById('homeScreen');
@@ -90,12 +90,34 @@ document.addEventListener('DOMContentLoaded', () => {
     showHomePage();
     updateUserCount(0);
     
+    // Apply initial device layout for all pages
+    applyDeviceLayout();
+    applyHomePageLayout();
+    
+    // Enhanced resize handler with debouncing
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-        if (currentChatType === 'video' && videoContainer.style.display === 'flex') {
-            setTimeout(() => {
-                applyDeviceLayout();
-            }, 100);
-        }
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            applyDeviceLayout();
+            applyHomePageLayout();
+            
+            // Specific handling for video chat
+            if (currentChatType === 'video' && videoContainer.style.display === 'flex') {
+                adjustVideoLayout();
+            }
+        }, 150);
+    });
+    
+    // Handle orientation change on mobile devices
+    window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+            applyDeviceLayout();
+            applyHomePageLayout();
+            if (currentChatType === 'video' && videoContainer.style.display === 'flex') {
+                adjustVideoLayout();
+            }
+        }, 300);
     });
 
     // Handle page visibility change
@@ -115,30 +137,150 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Device detection
-function isMobileDevice() {
+// Enhanced device detection and responsive behavior
+function getDeviceType() {
     const userAgent = navigator.userAgent.toLowerCase();
     const mobileKeywords = ['android', 'webos', 'iphone', 'ipad', 'ipod', 'blackberry', 'windows phone'];
     const isMobileUserAgent = mobileKeywords.some(keyword => userAgent.includes(keyword));
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isSmallScreen = window.innerWidth <= 768;
+    const screenWidth = window.innerWidth;
     
-    return isMobileUserAgent || (isTouchDevice && isSmallScreen);
+    if (screenWidth <= 480) return 'mobile-small';
+    if (screenWidth <= 768) return 'mobile';
+    if (screenWidth <= 1024) return 'tablet';
+    return 'desktop';
+}
+
+function isMobileDevice() {
+    const deviceType = getDeviceType();
+    return deviceType === 'mobile-small' || deviceType === 'mobile';
+}
+
+function isTabletDevice() {
+    return getDeviceType() === 'tablet';
 }
 
 function applyDeviceLayout() {
     const videoContainer = document.getElementById('videoContainer');
     const videoSection = document.querySelector('.video-section');
     const chatSection = document.querySelector('.chat-section');
+    const body = document.body;
     
-    if (isMobileDevice()) {
-        videoContainer.classList.add('mobile-layout');
-        videoSection?.classList.add('mobile-video-section');
-        chatSection?.classList.add('mobile-chat-section');
+    // Remove all existing device classes
+    const deviceClasses = ['mobile-layout', 'tablet-layout', 'desktop-layout', 
+                          'mobile-video-section', 'tablet-video-section', 'desktop-video-section',
+                          'mobile-chat-section', 'tablet-chat-section', 'desktop-chat-section'];
+    
+    deviceClasses.forEach(className => {
+        videoContainer?.classList.remove(className);
+        videoSection?.classList.remove(className);
+        chatSection?.classList.remove(className);
+        body.classList.remove(className);
+    });
+    
+    const deviceType = getDeviceType();
+    
+    // Apply appropriate classes based on device type
+    switch(deviceType) {
+        case 'mobile-small':
+        case 'mobile':
+            videoContainer?.classList.add('mobile-layout');
+            videoSection?.classList.add('mobile-video-section');
+            chatSection?.classList.add('mobile-chat-section');
+            body.classList.add('mobile-layout');
+            break;
+        case 'tablet':
+            videoContainer?.classList.add('tablet-layout');
+            videoSection?.classList.add('tablet-video-section');
+            chatSection?.classList.add('tablet-chat-section');
+            body.classList.add('tablet-layout');
+            break;
+        case 'desktop':
+            videoContainer?.classList.add('desktop-layout');
+            videoSection?.classList.add('desktop-video-section');
+            chatSection?.classList.add('desktop-chat-section');
+            body.classList.add('desktop-layout');
+            break;
+    }
+    
+    // Adjust video chat layout for better responsive behavior
+    if (currentChatType === 'video' && videoContainer?.style.display === 'flex') {
+        adjustVideoLayout();
+    }
+}
+
+function adjustVideoLayout() {
+    const deviceType = getDeviceType();
+    const videoSection = document.querySelector('.video-section');
+    const chatSection = document.querySelector('.chat-section');
+    const userVideo = document.querySelector('.user-video');
+    
+    if (!videoSection || !chatSection) return;
+    
+    if (deviceType === 'mobile-small' || deviceType === 'mobile') {
+        // Mobile: Stack video on top, chat below
+        videoSection.style.width = '100%';
+        videoSection.style.height = '65vh';
+        chatSection.style.width = '100%';
+        chatSection.style.height = '35vh';
+        chatSection.style.borderLeft = 'none';
+        chatSection.style.borderTop = '1px solid #ddd';
+        
+        // Position user video as overlay
+        if (userVideo) {
+            userVideo.style.position = 'absolute';
+            userVideo.style.width = '25%';
+            userVideo.style.height = '20%';
+            userVideo.style.top = '80px';
+            userVideo.style.right = '20px';
+            userVideo.style.zIndex = '15';
+        }
     } else {
-        videoContainer.classList.add('desktop-layout');
-        videoSection?.classList.add('desktop-video-section');
-        chatSection?.classList.add('desktop-chat-section');
+        // Desktop/Tablet: Side by side layout
+        const videoWidth = deviceType === 'tablet' ? '400px' : '450px';
+        videoSection.style.width = videoWidth;
+        videoSection.style.height = 'calc(100vh - 60px)';
+        chatSection.style.width = `calc(100% - ${videoWidth})`;
+        chatSection.style.height = 'calc(100vh - 60px)';
+        chatSection.style.borderLeft = '1px solid #ddd';
+        chatSection.style.borderTop = 'none';
+        
+        // Reset user video positioning
+        if (userVideo) {
+            userVideo.style.position = 'relative';
+            userVideo.style.width = '100%';
+            userVideo.style.height = 'calc(45vh - 60px)';
+            userVideo.style.top = 'auto';
+            userVideo.style.right = 'auto';
+            userVideo.style.zIndex = 'auto';
+        }
+    }
+}
+
+function applyHomePageLayout() {
+    const deviceType = getDeviceType();
+    const homePage = document.getElementById('homePage');
+    
+    if (!homePage) return;
+    
+    // Remove all existing home page device classes
+    const homePageClasses = ['home-mobile-layout', 'home-tablet-layout', 'home-desktop-layout'];
+    homePageClasses.forEach(className => {
+        homePage.classList.remove(className);
+    });
+    
+    // Apply appropriate class based on device type
+    switch(deviceType) {
+        case 'mobile-small':
+        case 'mobile':
+            homePage.classList.add('home-mobile-layout');
+            break;
+        case 'tablet':
+            homePage.classList.add('home-tablet-layout');
+            break;
+        case 'desktop':
+            homePage.classList.add('home-desktop-layout');
+            break;
     }
 }
 
@@ -169,6 +311,9 @@ function hideTermsModal() {
 
 function cleanupConnections() {
     console.log('Cleaning up connections...');
+    
+    // Remove mobile body class
+    document.body.classList.remove('mobile-video-active');
     
     // Clear timeouts
     if (connectionTimeout) {
@@ -255,6 +400,12 @@ async function startVideoChat() {
     homeScreen.style.display = 'none';
     chatContainer.style.display = 'none';
     videoContainer.style.display = 'flex';
+    
+    // Add mobile body class to prevent scrolling
+    if (isMobileDevice()) {
+        document.body.classList.add('mobile-video-active');
+    }
+    
     applyDeviceLayout();
     
     if (videoChatMessages) videoChatMessages.innerHTML = '';
@@ -856,7 +1007,7 @@ function disconnect() {
 
 function updateUserCount(count) {
     const safeCount = Math.max(0, parseInt(count) || 0);
-    const userText = `${safeCount} user${safeCount !== 1 ? 's' : ''} online`;
+    const userText = `${safeCount} online`;
     
     if (userCountText) {
         userCountText.textContent = userText;
@@ -1200,6 +1351,9 @@ function handleStrangerDisconnected() {
 }
 
 function endVideoCall() {
+    // Remove mobile body class
+    document.body.classList.remove('mobile-video-active');
+    
     if (localStream) {
         localStream.getTracks().forEach(track => track.stop());
         localStream = null;
