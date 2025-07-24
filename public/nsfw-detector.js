@@ -1,4 +1,3 @@
-
 const tf = require('@tensorflow/tfjs-node');
 const nsfw = require('nsfwjs');
 const { createCanvas, loadImage } = require('canvas');
