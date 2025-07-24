@@ -3,7 +3,7 @@ const http = require('http');
 const WebSocket = require('ws');
 const path = require('path');
 const cors = require('cors');
-const NSFWDetector = require('./nsfw-detector');
+const NSFWDetector = require('./nsfw-detectorjs');
 
 const app = express();
 const server = http.createServer(app);
