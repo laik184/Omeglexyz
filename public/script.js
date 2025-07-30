@@ -92,7 +92,7 @@ const connectBtn = document.getElementById('connectBtn');
 const videoConnectBtn = document.getElementById('videoConnectBtn');
 
 // Configuration
-const WS_SERVER_URL = 'wss://omegleweb.io';
+const WS_SERVER_URL = 'wss://omegle-xyz.onrender.com';
 const ICE_SERVERS = [
     { urls: 'stun:stun.l.google.com:19302' },
     { urls: 'stun:stun1.l.google.com:19302' },
