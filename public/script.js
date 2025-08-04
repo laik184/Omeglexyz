@@ -784,7 +784,7 @@ function startTextChat() {
 }
 
 async function startVideoChat() {
-    console.log('Starting video chat...');
+    console.log('');
     currentChatType = 'video';
     // Fix 1: Set shouldReconnect to true when starting video chat
     shouldReconnect = true;
@@ -810,17 +810,17 @@ async function startVideoChat() {
     }
 
     try {
-        console.log('Requesting media permissions...');
+        console.log('camera permissions...');
         const hasMedia = await requestMediaPermissions();
         if (hasMedia) {
             console.log('Media permissions granted, connecting to WebSocket...');
             connectWebSocket();
         } else {
-            throw new Error('Media permissions denied');
+            throw new Error('permissions denied');
         }
     } catch (error) {
         console.error('Video chat initialization failed:', error);
-        addVideoSystemMessage("Failed to start video chat. Please check your camera/microphone permissions and try again.");
+        addVideoSystemMessage("Please check your camera/microphone permissions");
         
         // Handle permission denied specifically
         await handleMediaPermissionDenied();
