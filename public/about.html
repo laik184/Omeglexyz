@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>About Omegle.com - Safe Video Chat Platform | Our Story & Mission</title>
+    <meta name="description" content="Learn about Omegle.com - the modern, safer alternative to traditional video chat platforms. Built by students for everyone. Safe, private, and user-friendly.">
+    <meta name="keywords" content="about omegle, video chat platform, safe chat, student built, privacy focused, chat history, mission">
+    <meta name="author" content="Omegle.com Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.omegle.com/about.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Omegle.com - Safe Video Chat Platform">
+    <meta property="og:description" content="Learn about our mission to create safe, meaningful connections worldwide through video chat.">
+    <meta property="og:image" content="https://www.omegle.com/logo.png">
+    <meta property="og:url" content="https://www.omegle.com/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About Omegle.com - Safe Video Chat Platform">
+    <meta name="twitter:description" content="Learn about our mission to create safe, meaningful connections worldwide through video chat.">
+    <meta name="twitter:image" content="https://www.omegle.com/logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Omegle.com",
+        "description": "Learn about Omegle.com - the modern, safer alternative to traditional video chat platforms",
+        "url": "https://www.omegle.com/about.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Omegle.com",
+            "description": "Safe video chat platform connecting people worldwide",
+            "foundingDate": "2024",
+            "url": "https://www.omegle.com"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-container {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .about-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .about-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .about-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        
+        .about-logo-text {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FF6B35;
+        }
+        
+        .about-com {
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .about-main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .about-content {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        
+        .about-section {
+            margin-bottom: 30px;
+        }
+        
+        .about-section h2 {
+            font-size: 24px;
+            color: #4a90e2;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4a90e2;
+        }
+        
+        .about-section h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+        
+        .about-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .about-section ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .about-section li {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #4a90e2;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: #4a90e2;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .hero-box {
+            background: linear-gradient(135deg, #4a90e2, #667eea);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .hero-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-box p {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .about-main {
+                padding: 20px 15px;
+            }
+            
+            .about-content {
+                padding: 25px 20px;
+                margin-bottom: 25px;
+            }
+            
+            .about-section h2 {
+                font-size: 20px;
+            }
+            
+            .about-section h3 {
+                font-size: 18px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .hero-box h3 {
+                font-size: 24px;
+            }
+            
+            .hero-box p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="about-container">
+    <!-- Header -->
+    <header class="about-header">
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="about-logo">
+                <img src="logo.png" alt="Omegle.com Logo - Video Chat Platform">
+                <span class="about-logo-text">omegle<span class="about-com">.com</span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-main">
+        <h1 style="font-size: 48px; font-weight: bold; text-align: center; margin-bottom: 40px; color: #333;">🌟 About Our Video Chat Platform</h1>
+        
+        <article class="about-content">
+            <section class="hero-box">
+                <h2 style="font-size: 28px; margin-bottom: 15px;">👋 Hey Everyone!</h2>
+                <p>We're a group of college students who couldn't let the magic of spontaneous conversations disappear. When the original Omegle went offline, we knew we had to build something better! 🚀</p>
+            </section>
+
+            <section class="about-section" aria-labelledby="mission-heading">
+                <h2 id="mission-heading">🎯 Our Mission</h2>
+                <p>To create a safe, friendly, and modern platform where people from all over the world can connect, share stories, and make genuine connections through spontaneous conversations.</p>
+                
+                <p>We believe in the power of human connection and the magic that happens when strangers become friends, even if just for a moment. Our platform is designed to facilitate these meaningful interactions while prioritizing safety and respect.</p>
+            </section>
+
+            <section class="about-section" aria-labelledby="what-makes-us-different">
+                <h2 id="what-makes-us-different">✨ What Makes Us Different</h2>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>🛡️ Safety First</h3>
+                        <p>Advanced moderation systems and community guidelines ensure a respectful environment for everyone.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>🌐 No App Needed</h3>
+                        <p>Works directly in your browser on any device. No downloads, no installations, just instant connections.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>🔒 Privacy Focused</h3>
+                        <p>Your conversations are private, anonymous, and not stored on our servers.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>⚡ Modern Technology</h3>
+                        <p>Built with cutting-edge web technologies for smooth, reliable video and text chat experiences.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about-section" aria-labelledby="our-story-heading">
+                <h2 id="our-story-heading">👥 Our Story</h2>
+                <p>We're a diverse team of computer science students from different universities who came together with a shared vision. When we noticed the gap left by the original Omegle's closure, we saw an opportunity to create something even better.</p>
+                
+                <p>Working nights and weekends between classes, we've built this platform from the ground up with modern web technologies, focusing on three core principles:</p>
+                
+                <ul>
+                    <li><strong>Safety:</strong> Robust moderation and reporting systems</li>
+                    <li><strong>Privacy:</strong> No data collection, no account requirements</li>
+                    <li><strong>Quality:</strong> Smooth, reliable connections and great user experience</li>
+                </ul>
+            </section>
+
+            <section class="about-section" aria-labelledby="global-community-heading">
+                <h2 id="global-community-heading">🌍 Global Community</h2>
+                <p>Our platform connects people from over 100 countries, creating a truly global community of friendly strangers. Whether you're looking to:</p>
+                
+                <ul>
+                    <li>Practice a new language with native speakers</li>
+                    <li>Learn about different cultures and perspectives</li>
+                    <li>Share your hobbies and interests</li>
+                    <li>Simply have a fun conversation to brighten your day</li>
+                    <li>Make new friends from around the world</li>
+                </ul>
+                
+                <p>Our community welcomes everyone with open arms! 🤗</p>
+            </section>
+
+            <section class="about-section" aria-labelledby="future-heading">
+                <h2 id="future-heading">🔮 The Future</h2>
+                <p>We're constantly working to improve the platform based on user feedback. Upcoming features include:</p>
+                
+                <ul>
+                    <li>Enhanced interest matching algorithms</li>
+                    <li>Group chat capabilities</li>
+                    <li>Mobile app development</li>
+                    <li>Advanced safety features</li>
+                    <li>Language translation tools</li>
+                </ul>
+            </section>
+
+            <section class="about-section" aria-labelledby="community-values-heading">
+                <h2 id="community-values-heading">💝 Community Values</h2>
+                <p>We believe in fostering a community built on:</p>
+                
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>🤝 Respect</h3>
+                        <p>Treating every person with dignity and kindness, regardless of background or beliefs.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>🌈 Inclusivity</h3>
+                        <p>Welcome everyone from all walks of life to share in meaningful conversations.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>🎨 Creativity</h3>
+                        <p>Encouraging unique conversations and creative expression in a safe environment.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>📚 Learning</h3>
+                        <p>Every conversation is an opportunity to learn something new about the world.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about-section" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">📞 Get in Touch</h2>
+                <p>We love hearing from our community! Whether you have suggestions, feedback, or just want to say hello, don't hesitate to reach out. After all, we're just a group of students who love connecting people! 😊</p>
+                
+                <p>Follow us on social media or <a href="/contact.html" style="color: #4a90e2; text-decoration: none; font-weight: bold;">contact us directly</a> through our contact form. We read every single message and genuinely appreciate your input!</p>
+            </section>
+
+            <div class="hero-box">
+                <h2 style="font-size: 28px; margin-bottom: 15px;">🚀 Ready to Join Our Community?</h2>
+                <p>Join thousands of people worldwide who are already making new friends and having amazing conversations. Your next great chat is just one click away!</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- NSFW Disclaimer Section for AdSense Compliance -->
+    <section class="nsfw-disclaimer" style="background: linear-gradient(135deg, #dc3545, #c82333); color: white; padding: 25px 20px; margin: 0; border-top: 4px solid #a71e2a; box-shadow: 0 -2px 10px rgba(220, 53, 69, 0.2);" aria-labelledby="disclaimer-heading">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 id="disclaimer-heading" style="font-size: 24px; font-weight: bold; margin-bottom: 15px; color: #ffffff; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; gap: 10px;">
+                ⚠️ <span>IMPORTANT NOTICE</span>
+            </h2>
+            <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);">
+                <p style="font-size: 18px; font-weight: bold; margin: 0; line-height: 1.6; color: #ffffff; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+                    <strong>NSFW (Not Safe For Work) content is strictly prohibited on this platform.</strong><br>
+                    Users engaging in inappropriate behavior will be permanently banned.
+                </p>
+            </div>
+            <div style="margin-top: 15px; font-size: 14px; color: rgba(255,255,255,0.9);">
+                We maintain a safe, family-friendly environment for all users worldwide 🌍
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px; background: linear-gradient(135deg, #ffffff, #f8f9fa); border-top: 1px solid #e9ecef;">
+        <nav role="navigation" aria-label="Footer navigation">
+            <div style="margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="/" style="color: #666; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="/contact.html" style="color: #666; text-decoration: none; font-weight: 500;">Contact</a>
+                <a href="/privacy-policy.html" style="color: #666; text-decoration: none; font-weight: 500;">Privacy</a>
+                <a href="/terms.html" style="color: #666; text-decoration: none; font-weight: 500;">Terms</a>
+            </div>
+        </nav>
+        
+        <a href="/" style="background: linear-gradient(135deg, #4a90e2 0%, #667eea 100%); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: bold; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3); text-transform: uppercase; letter-spacing: 1px; text-decoration: none; display: inline-block; margin-bottom: 20px;">🏠 Back to Home</a>
+        
+        <div style="margin-top: 20px; color: #666; font-size: 14px;">
+            © 2024 omegle.com - Built with ❤️ by students, for everyone | <a href="/sitemap.xml" style="color: #666;">Sitemap</a>
+        </div>
+    </footer>
+</body>
+</html>
