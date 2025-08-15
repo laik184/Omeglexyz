@@ -141,7 +141,7 @@ const connectBtn = document.getElementById('connectBtn');
 const videoConnectBtn = document.getElementById('videoConnectBtn');
 
 // Configuration
-const WS_SERVER_URL = 'wss://omegle-81td.onrender.com';
+const WS_SERVER_URL = 'wss://omegle-xyz-1.onrender.com';
 const ICE_SERVERS = [
     { urls: 'stun:stun.l.google.com:19302' },
     { urls: 'stun:stun1.l.google.com:19302' },
