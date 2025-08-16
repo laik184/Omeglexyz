@@ -365,11 +365,19 @@
         </div>
 
         <div class="video-chat-layout">
-            <div class="video-section">
-                <div class="video-window stranger-video">
-                    <video class="video-element" id="remoteVideo" autoplay playsinline></video>
-                    <div class="video-label">Stranger</div>
-                </div>
+    <div class="video-section">
+        <div class="video-window stranger-video">
+            <!-- Stranger video -->
+            <video class="video-element" id="remoteVideo" autoplay playsinline></video>
+            
+            <!-- ⭕ Loading circle (hidden by default) -->
+            <div id="connectingCircle" class="circle hidden"></div>
+            
+            <!-- Label -->
+            <div class="video-label">Stranger</div>
+        </div>
+    </div>
+        </div>
 
                 <div class="video-window user-video">
                     <video class="video-element" id="localVideo" autoplay playsinline muted></video>
