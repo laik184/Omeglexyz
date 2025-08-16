@@ -128,6 +128,7 @@ const footerAboutBtn = document.getElementById('footerAboutBtn');
 const sendVideo = document.getElementById('sendVideo');
 let remoteVideo = document.getElementById('remoteVideo');
 let localVideo = document.getElementById('localVideo');
+const connectingCircle = document.getElementById("connectingCircle");
 const messageMenu = document.getElementById('messageMenu');
 const deleteMessage = document.getElementById('deleteMessage');
 const replyMessage = document.getElementById('replyMessage');
