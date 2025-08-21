@@ -149,8 +149,8 @@ const videoConnectBtn = document.getElementById('videoConnectBtn');
 
 // Configuration - Use multiple fallback WebSocket servers
 const WS_SERVERS = [
-    'wss://echo.websocket.org',
-    'wss://ws.postman-echo.com/raw'
+    'wss://omegle-xyz-1.onrender.com/',
+    
 ];
 let currentServerIndex = 0;
 const WS_SERVER_URL = WS_SERVERS[currentServerIndex];
