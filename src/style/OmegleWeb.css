@@ -71,6 +71,12 @@ body {
 }
 
 /* Info Cards */
+.info-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .info-card {
   background: white;
   border-radius: 12px;
@@ -78,6 +84,16 @@ body {
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-left: 4px solid #ccc;
+}
+
+.info-card.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card.clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card--orange {
