@@ -23,40 +23,48 @@ const OmegleWeb = () => {
           <h1 className="main-title">Talk to strangers!</h1>
 
           {/* Welcome Cards */}
-          <div className="info-card card--orange">
-            <h3 className="card-title">👋 Welcome to the New Era! 🚀</h3>
-            <p className="card-text">
-              Missing Omegle? Same here! When the original Omegle went offline, we felt that loss too. So we decided to build something better!
-            </p>
-          </div>
+          <Link to="/new-era" className="info-card-link">
+            <div className="info-card card--orange clickable">
+              <h3 className="card-title">👋 Welcome to the New Era! 🚀</h3>
+              <p className="card-text">
+                Missing Omegle? Same here! When the original Omegle went offline, we felt that loss too. So we decided to build something better!
+              </p>
+            </div>
+          </Link>
 
-          <div className="info-card card--green">
-            <h3 className="card-title">✨ Welcome to Omegle Web</h3>
-            <p className="card-text">
-              A modern, safer, and friendlier alternative to the original Omegle! 😊 Built by students, for everyone.
-            </p>
-          </div>
+          <Link to="/welcome" className="info-card-link">
+            <div className="info-card card--green clickable">
+              <h3 className="card-title">✨ Welcome to Omegle Web</h3>
+              <p className="card-text">
+                A modern, safer, and friendlier alternative to the original Omegle! 😊 Built by students, for everyone.
+              </p>
+            </div>
+          </Link>
 
           {/* What's the Deal Section */}
           <h2 className="section-title">🌍 What's the Deal? 🤔</h2>
 
-          <div className="info-card card--green">
-            <div className="card-content-with-image">
-              <div>
-                <h4 className="feature-title">🌐 Global Community</h4>
-                <p className="card-text">
-                  A worldwide community for meeting new people through video and text chat 💬📹.
-                </p>
+          <Link to="/global-community" className="info-card-link">
+            <div className="info-card card--green clickable">
+              <div className="card-content-with-image">
+                <div>
+                  <h4 className="feature-title">🌐 Global Community</h4>
+                  <p className="card-text">
+                    A worldwide community for meeting new people through video and text chat 💬📹.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
 
-          <div className="info-card card--red">
-            <h4 className="feature-title">🔒 Privacy-Focused Design</h4>
-            <p className="card-text">
-              Your data stays yours! 🛡️ We enforce strict community guidelines and maintain a privacy-first approach.
-            </p>
-          </div>
+          <Link to="/privacy-design" className="info-card-link">
+            <div className="info-card card--red clickable">
+              <h4 className="feature-title">🔒 Privacy-Focused Design</h4>
+              <p className="card-text">
+                Your data stays yours! 🛡️ We enforce strict community guidelines and maintain a privacy-first approach.
+              </p>
+            </div>
+          </Link>
 
           <div className="info-card card--purple">
             <h4 className="feature-title">🌐 No App Needed</h4>
@@ -145,7 +153,7 @@ const OmegleWeb = () => {
               © 2025 Omegle v2.0. All rights reserved. |
             </p>
             <p className="footer-links">
-              Built January 2025 | <Link to="/privacy-policy" className="footer-link">Privacy Policy</Link> | <Link to="/terms-conditions" className="footer-link">Terms & Conditions</Link> | <Link to="/about" className="footer-link">About</Link> | Contact
+              Built January 2025 | <Link to="/privacy-policy" className="footer-link">Privacy Policy</Link> | <Link to="/terms-conditions" className="footer-link">Terms & Conditions</Link> | <Link to="/about" className="footer-link">About</Link> | <Link to="/contact" className="footer-link">Contact</Link>
             </p>
           </footer>
         </div>
@@ -154,4 +162,4 @@ const OmegleWeb = () => {
   );
 };
 
-export default OmegleWeb;
+export default OmegleWeb
