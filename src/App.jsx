@@ -9,6 +9,12 @@ import NewEra from './components/NewEra.jsx';
 import WelcomeToOmegleWeb from './components/WelcomeToOmegleWeb.jsx';
 import GlobalCommunity from './components/GlobalCommunity.jsx';
 import PrivacyFocusedDesign from './components/PrivacyFocusedDesign.jsx';
+import NoAppNeeded from './components/NoAppNeeded.jsx';
+import SuperiorExperience from './components/SuperiorExperience.jsx';
+import ReadyToJoin from './components/ReadyToJoin.jsx';
+import GlobalConnectionPlatform from './components/GlobalConnectionPlatform.jsx';
+import SafetyFirst from './components/SafetyFirst.jsx';
+import YourNextAdventure from './components/YourNextAdventure.jsx';
 
 function App() {
   return (
@@ -23,9 +29,16 @@ function App() {
         <Route path="/welcome" element={<WelcomeToOmegleWeb />} />
         <Route path="/global-community" element={<GlobalCommunity />} />
         <Route path="/privacy-design" element={<PrivacyFocusedDesign />} />
+        <Route path="/no-app-needed" element={<NoAppNeeded />} />
+        <Route path="/superior-experience" element={<SuperiorExperience />} />
+        <Route path="/ready-to-join" element={<ReadyToJoin />} />
+        <Route path="/global-connection-platform" element={<GlobalConnectionPlatform />} />
+        <Route path="/safety-first" element={<SafetyFirst />} />
+        <Route path="/your-next-adventure" element={<YourNextAdventure />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
